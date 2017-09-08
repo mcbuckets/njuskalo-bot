@@ -53,7 +53,7 @@ class MailgunEmailer
                 'from' => $this->getFrom(),
                 'to' => implode(',', $this->getRecipients()),
                 'subject' => 'New apartments found!',
-                'text' => $this->message
+                'html' => $this->message
             ]
         );
     }

@@ -17,5 +17,3 @@ while(true)
 
     $bot->checkForNewApartments();
 };
-
-$bot->checkForNewApartments();

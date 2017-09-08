@@ -16,13 +16,13 @@ class NjuskaloBot
         preg_match('@datetime\="(.*?)"@', $request->getContent(), $matches);
 
         $time = date("U", strtotime($matches[1]));
-        $fiveMinBefore = time() - 60 * 10000;
+        $fiveMinBefore = time() - 60 * 5;
 
         if($time > $fiveMinBefore){
 
             $this->sendNotificationMail(new MailgunEmailer(
                 "New apartments found!",
-                "Check new <a href='".SEARCH_URL."'>apartments</a>",
+                'Check new <a href="'.SEARCH_URL.'">apartments</a>',
                 RECIPIENTS
             ));
 
