@@ -13,7 +13,8 @@ $bot = new NjuskaloBot();
 
 while(true)
 {
+    $bot->checkForNewApartments();
+
     sleep(240);
 
-    $bot->checkForNewApartments();
 };
