@@ -14,7 +14,7 @@ class NjuskaloBot
         $matches = [];
 
         preg_match('@datetime\="(.*?)"@', $request->getContent(), $matches);
-        d($matches[1]);
+
         $time = date("U", strtotime($matches[1]));
         $fiveMinBefore = time() - 60 * 10000;
 
