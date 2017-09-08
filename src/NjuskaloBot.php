@@ -16,9 +16,9 @@ class NjuskaloBot
         preg_match('@datetime\="(.*?)"@', $request->getContent(), $matches);
 
         $time = date("U", strtotime($matches[1]));
-        $fiveMinBefore = time() - 60 * 5;
+        $fiveMinAgo = time() - 60 * 5;
 
-        if($time > $fiveMinBefore){
+        if($time > $fiveMinAgo){
 
             $this->sendNotificationMail(new MailgunEmailer(
                 "New apartments found!",
