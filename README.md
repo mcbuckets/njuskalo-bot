@@ -1,9 +1,9 @@
 # njuskalo-bot
 Bot that scrapes njuskalo.hr in search for newly listed apartments
 
-I use it on raspberry pi as deamon php script managed by Supervisor.
+I use it on raspberry pi as deamon php script managed by Supervisord.
 
-Supervisor config:
+Supervisord config:
 
 [program:njuskalo_bot]<br/>
 command=php /usr/src/njuskalo_bot/app.php<br/>
